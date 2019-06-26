@@ -1,0 +1,78 @@
+#1: Replace all odd numbers in array with -1
+
+import numpy as np
+x = np.arange(10) 
+x[1::2]=-1
+print(x)
+
+#2: Convert 1D array to 2D array with 2 rows
+
+import numpy as np
+a = np.arange(10)
+print(a)
+b = np.split(a,2)
+print(b)
+
+#3: Generate custom Sequence
+
+import numpy as np
+x = np.array([1,2,3])    
+y = np.tile(x, 3)
+z = np.repeat(x, 3)
+print(y)
+print(z)
+a = np.concatenate((z, y))
+print(a)
+
+#4: Get common items between two arrays
+
+import numpy as np
+
+x = np.array([1,2,3,2,3,4,3,4,5,6])
+y = np.array([7,2,10,2,7,4,9,4,9,8])
+z = np.intersect1d(x,y)
+print(z)
+
+#5 Get position of common items between two array
+import numpy as np
+
+x = np.array([1,2,3,2,3,4,3,4,5,6])
+y = np.array([7,2,10,2,7,4,9,4,9,8])
+print(np.where(x==y)[0])
+
+
+#6
+import numpy as np
+
+a = np.linspace(5,10,15)
+a = a.reshape(5,3)
+print(a)
+
+#7
+import numpy as np
+
+np.set_printoptions(threshold=6)
+print(np.arange(15))
+
+#8
+import numpy as np
+
+x = np.random.seed(100)
+rand_arr = np.random.random([3,3])/1e3
+print(rand_arr)
+np.set_printoptions(suppress=True)
+print(rand_arr)
+
+#9: Swap Columns
+import numpy as np
+
+arr = np.arange(9).reshape(3,3)
+arr[:,[0, 1]] = arr[:,[1, 0]]
+print(arr)
+
+#10: Swap rows
+import numpy as np
+
+arr = np.arange(9).reshape(3,3)
+arr[[0, 1]] = arr[[1, 0]]
+print(arr)
